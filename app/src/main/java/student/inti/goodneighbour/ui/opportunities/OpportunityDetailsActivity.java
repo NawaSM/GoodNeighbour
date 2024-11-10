@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
+import android.graphics.Bitmap;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -25,6 +26,7 @@ import java.util.Map;
 
 import student.inti.goodneighbour.R;
 import student.inti.goodneighbour.models.Opportunity;
+import student.inti.goodneighbour.utils.ImageUtils;
 
 public class OpportunityDetailsActivity extends AppCompatActivity {
     private static final String DATE_FORMAT = "MMMM dd, yyyy 'at' hh:mm a";
@@ -92,15 +94,27 @@ public class OpportunityDetailsActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(opportunity.getTitle());
         }
 
+        // Load opportunity image
         ImageView imageView = findViewById(R.id.opportunityImage);
-        if (opportunity.getImageUrl() != null && !opportunity.getImageUrl().isEmpty()) {
-            Glide.with(this)
-                    .load(opportunity.getImageUrl())
-                    .placeholder(R.drawable.placeholder_image)
-                    .error(R.drawable.error_image)
-                    .centerCrop()
-                    .into(imageView);
+        String imagePath = opportunity.getImageUrl();
+
+        if (imagePath != null && !imagePath.trim().isEmpty()) {
+            Log.d("OpportunityDetails", "Loading image from path: " + imagePath);
+            ImageUtils.loadImage(imagePath, new ImageUtils.OnCompleteListener<Bitmap>() {
+                @Override
+                public void onSuccess(Bitmap bitmap) {
+                    imageView.setImageBitmap(bitmap);
+                    Log.d("OpportunityDetails", "Successfully loaded opportunity image");
+                }
+
+                @Override
+                public void onFailure(String error) {
+                    Log.e("OpportunityDetails", "Failed to load opportunity image: " + error);
+                    imageView.setImageResource(R.drawable.placeholder_image);
+                }
+            });
         } else {
+            Log.d("OpportunityDetails", "No image path available");
             imageView.setImageResource(R.drawable.placeholder_image);
         }
 
