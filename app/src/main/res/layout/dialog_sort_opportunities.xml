@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/sortGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sortDateDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date (Newest First)"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/sortDateAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date (Oldest First)"/>
+
+        <RadioButton
+            android:id="@+id/sortTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title (A-Z)"/>
+
+        <RadioButton
+            android:id="@+id/sortApplications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Most Applications"/>
+
+    </RadioGroup>
+
+</LinearLayout>

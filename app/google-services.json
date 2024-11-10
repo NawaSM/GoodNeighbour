@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "201130413971",
+    "firebase_url": "https://goodneighbour-b8fad-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "goodneighbour-b8fad",
+    "storage_bucket": "goodneighbour-b8fad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201130413971:android:c4ced13e21d94214696266",
+        "android_client_info": {
+          "package_name": "student.inti.goodneighbour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBHJw-6iozzOo6tteSKLJDtmOuCBc1fxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

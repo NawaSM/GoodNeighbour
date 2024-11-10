@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_opportunities"
+        android:icon="@drawable/ic_search"
+        android:title="Opportunities"/>
+
+    <item
+        android:id="@+id/navigation_applications"
+        android:icon="@drawable/ic_list"
+        android:title="Applications"/>
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profile"/>
+</menu>

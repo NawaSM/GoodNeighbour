@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/sortGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/sortDateDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date (Newest First)"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/sortDateAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date (Oldest First)"/>
+
+        <RadioButton
+            android:id="@+id/sortTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title (A-Z)"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter By Location"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/locationChipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter By Status"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/statusGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/statusAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/statusActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Active"/>
+
+        <RadioButton
+            android:id="@+id/statusClosed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Closed"/>
+    </RadioGroup>
+
+</LinearLayout>
